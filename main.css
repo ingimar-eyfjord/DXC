@@ -3,7 +3,13 @@
 --white: white;
 --highlight: #f8ea4a;
 }
-
+html {
+    box-sizing: border-box;
+    height: 100%;
+  }
+  *, *::before, *::after {
+    box-sizing: inherit;
+  }
 body{
     padding: 0;
     margin: 0;
@@ -17,7 +23,7 @@ body{
     flex-direction: column;
 }
 
-.formBtn{
+.formBtn, [type="text"], [type="email"]{
 border: none;
 border-style: none;
 width: 100%;
@@ -25,26 +31,53 @@ height: 2rem;
 font-weight: 600;
 margin-top: 1rem;
 }
+[type="text"], [type="email"]{
+    border: thin;
+    border-style: solid;  
+}
 
-[type="submit"]{
+.btn-success{
     background-color: var(--highlight);
 }
-[type="clear"]{
+.btn-clear{
     background-color: var(--black);
     color: var(--white);
+}
+
+.persvassivehook{
+display: grid;
+grid-template-rows: 4rem 4rem 4rem;
+text-align: center;
+font-size: 2rem;
+font-weight: 800;
+margin-bottom: 5rem;
+}
+.persvassivehook > p{
+    margin-right: 0.8ex;
+}
+
+.formmodalbackground{
+    position: absolute;
+    top: 0;
+    left: 0;
+height: 100%;
+width: 100%;
+background-color: gray;
+opacity: 0.2;
+z-index: 49;
+}
+.formmodal{
+    background-color: white;
+    z-index: 50;
+    padding: 2rem;
+    width: 30vw;
+    border: black;
+    border-width: 1px;
+    border-style: solid;
 }
 /* ============  */
 /* down here is the css that is for the switch */
 
-html {
-    box-sizing: border-box;
-    height: 100%;
-  }
-  
-  *, *::before, *::after {
-    box-sizing: inherit;
-  }
-  
   body {
     display: flex;
     align-items: center;
@@ -274,3 +307,79 @@ html {
     opacity: 0;
   }
   
+  fieldset{
+      border-style: none;
+  }
+  .cechboxlist{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      margin-bottom: 2rem;
+  }
+  .center{
+      display: grid;
+      grid-template-columns: 0.2fr 1fr;
+      grid-template-rows:0.5fr 0.5fr;
+  }
+  .center > p{
+margin: 0;}
+.center > a{
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    grid-column: 2;}
+
+ .twocol{
+display: grid;
+grid-template-columns: 1fr 1fr;
+grid-template-rows: 1fr;
+grid-column-gap: 1rem;
+margin-bottom: 1rem;
+margin-top: 1rem;
+ }
+ .twocol > label:first-child{
+     grid-column: 1;
+     grid-row: 1;
+}
+ .twocol > input:nth-child(2){
+    grid-column: 1;
+    grid-row: 1;
+ }
+ .twocol > label:nth-child(3){
+    grid-column: 2;
+    grid-row: 1;
+ }
+ .twocol > input:nth-child(4){
+    grid-column: 2;
+    grid-row: 1;
+ }
+ .onecol input{
+    margin: 0;
+     }
+ .onecol{
+margin-top: 1rem;
+ }
+ [data-userMessage]{
+     padding: 5rem;
+     position: absolute;
+     top: 60%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     background-color: white;
+     width: 40vw;
+     height: auto;
+     z-index: 100;
+     opacity: 0;
+     text-align: center;
+     font-size: 2rem;
+     font-weight: 800;
+     animation: appear 0.2s forwards ease-out;
+     border: black;
+     border-width: 1px;
+     border-style: solid;
+ }
+ @keyframes appear {
+     to{
+         opacity: 1;
+         top: 50%;
+     }
+ }

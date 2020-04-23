@@ -7,72 +7,153 @@
     <title>DXC</title>
     <link rel="stylesheet" href="main.css">
     <meta name="robots" content="noindex" />
-    <script src="https://kea-alt-del.dk/iform/login.js"></script>
+    <script src="https://kea-alt-del.dk/dxc/login.js"></script>
+    <script src="https://kit.fontawesome.com/d1dc80a86d.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
 
-    <a href="radio.html">Jumping Radio</a>
-    <a href="asset.html">Asset</a>
-    <form class="flexRowColumn" action="/action_page.php">
+
+    <div data-userMessage="Permission" class="hidden">
+        <p>Hey friend! Please accept the terms of service agreement</p>
+        <button data-closeUsermessage="Permission" class="formBtn btn-success">OK</button>
+    </div>
+
+    <div data-userMessage="AlreadySubs" class="hidden">
+        <p>Hey friend! You're already be subscribed</p>
+        <button data-closeUsermessage="AlreadySubs" class="formBtn btn-success">OK</button>
+    </div>
+    <div data-userMessage="Success" class="hidden">
+        <p>Welcome to the team! Using the keywords you gave us we promise send only relevant content.</p>
+        <p>Enjoy!</p>
+        <button data-closeUsermessage="Success" class="formBtn btn-success">OK</button>
+    </div>
+
+
+    <div class="formmodalbackground"></div>
+
+
+
+    <form id="signupform" class="flexRowColumn formmodal">
+
+        <div class="persvassivehook">
+            <p>Join the</p>
+            <p data-counter class="count">51687</p>
+            <p>professionals who read our newsletters</p>
+        </div>
         <fieldset class="flexRowColumn">
-            <legend>This is how this looks:</legend>
 
-            <fieldset class="flexRowColumn">
-                <legend>Input Text:</legend>
+
+            <div class="twocol">
                 <label for="fname">First name:</label>
-                <input type="text" id="fname" name="fname" value="John">
+                <input type="text" id="fname" name="fname" value="" required>
                 <label for="lname">Last name:</label>
-                <input type="text" id="lname" name="lname" value="Doe">
-                <label for="lname">Email</label>
-                <input type="email" id="lname" name="lname" value="Doe">
-            </fieldset>
+                <input type="text" id="lname" name="lname" value="" required>
+            </div>
+            <div class="onecol">
+                <label for="Email">Email</label>
+                <input type="email" id="Email" name="Email" value="" required>
+            </div>
+            <div class="onecol">
+                <label for="Country">Country</label>
+                <input type="text" id="Country" name="Country" value="" required>
+            </div>
+            <div class="twocol">
+                <label for="Company">Company Name</label>
+                <input type="text" id="Company" name="Company" value="" required>
+                <label for="Title">Job Title</label>
+                <input type="text" id="Title" name="Title" value="" required>
+            </div>
 
-            <fieldset class="flexRowColumn">
-                <legend>Select:</legend>
-                <select name="cars">
-                    <option value="volvo">Volvo</option>
-                    <option value="saab">Saab</option>
-                    <option value="fiat">Fiat</option>
-                    <option value="audi">Audi</option>
-                </select>
-            </fieldset>
+            <p>Select keywords</p>
 
-            <fieldset class="flexRowColumn">
-                <legend>Checkbox:</legend>
-                <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-                <label for="vehicle1"> I have a bike</label>
-                <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
-                <label for="vehicle2"> I have a car</label>
-                <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
-                <label for="vehicle3"> I have a boat</label>
-            </fieldset>
-            <br>
-
-            <fieldset class="flexRowColumn">
-                <legend>Plain Switch:</legend>
-                <label class="switch-wrap">
-                    <input type="checkbox" />
-                    <div class="switch"></div>
+            <div class="cntr cechboxlist">
+                <label for="cbx2" class="label-cbx">
+                    <input data-checkbox id="cbx2" type="checkbox" class="invisible">
+                    <div class="checkbox">
+                        <svg width="20px" height="20px" viewBox="0 0 20 20">
+                            <path
+                                d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z">
+                            </path>
+                            <polyline points="4 11 8 15 16 6"></polyline>
+                        </svg>
+                    </div>
+                    <span>Procurment</span>
                 </label>
-            </fieldset>
+
+                <label for="cbx3" class="label-cbx">
+                    <input data-checkbox id="cbx3" type="checkbox" class="invisible">
+                    <div class="checkbox">
+                        <svg width="20px" height="20px" viewBox="0 0 20 20">
+                            <path
+                                d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z">
+                            </path>
+                            <polyline points="4 11 8 15 16 6"></polyline>
+                        </svg>
+                    </div>
+                    <span>IT</span>
+                </label>
+
+                <label for="cbx4" class="label-cbx">
+                    <input data-checkbox id="cbx4" type="checkbox" class="invisible">
+                    <div class="checkbox">
+                        <svg width="20px" height="20px" viewBox="0 0 20 20">
+                            <path
+                                d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z">
+                            </path>
+                            <polyline points="4 11 8 15 16 6"></polyline>
+                        </svg>
+                    </div>
+                    <span>Marketing</span>
+                </label>
+
+                <label for="cbx5" class="label-cbx">
+                    <input data-checkbox id="cbx5" type="checkbox" class="invisible">
+                    <div class="checkbox">
+                        <svg width="20px" height="20px" viewBox="0 0 20 20">
+                            <path
+                                d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z">
+                            </path>
+                            <polyline points="4 11 8 15 16 6"></polyline>
+                        </svg>
+                    </div>
+                    <span>Service Industry</span>
+                </label>
+
+                <label for="cbx6" class="label-cbx">
+                    <input data-checkbox id="cbx6" type="checkbox" class="invisible">
+                    <div class="checkbox">
+                        <svg width="20px" height="20px" viewBox="0 0 20 20">
+                            <path
+                                d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z">
+                            </path>
+                            <polyline points="4 11 8 15 16 6"></polyline>
+                        </svg>
+                    </div>
+                    <span>Retail Industry</span>
+                </label>
+
+                <label for="cbx7" class="label-cbx">
+                    <input data-checkbox id="cbx7" type="checkbox" class="invisible">
+                    <div class="checkbox">
+                        <svg width="20px" height="20px" viewBox="0 0 20 20">
+                            <path
+                                d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z">
+                            </path>
+                            <polyline points="4 11 8 15 16 6"></polyline>
+                        </svg>
+                    </div>
+                    <span>E-commerce</span>
+                </label>
+
+            </div>
 
 
 
 
 
-            <fieldset class="flexRowColumn">
-                <legend>Radio:</legend>
-                <input type="radio" id="male" name="gender" value="male">
-                <label for="male">Male</label><br>
-                <input type="radio" id="female" name="gender" value="female">
-                <label for="female">Female</label><br>
-                <input type="radio" id="other" name="gender" value="other">
-                <label for="other">Other</label>
-            </fieldset>
 
-
-            <fieldset class="flexRowColumn">
+            <!-- <fieldset class="flexRowColumn">
                 <legend>Radio with color (I really like this one):</legend>
                 <div class="cntr">
 
@@ -97,86 +178,30 @@
                     </label>
 
                 </div>
-            </fieldset>
+            </fieldset> -->
 
 
 
 
-            <fieldset class="flexRowColumn">
-                <legend>Switch with indicator (I really like this one):</legend>
-                <div class="center">
-                    <input type="checkbox" id="cbx" style="display:none" />
-                    <label for="cbx" class="toggle">
-                        <span>
-                            <svg width="10px" height="10px" viewBox="0 0 10 10">
-                                <path
-                                    d="M5,1 L5,1 C2.790861,1 1,2.790861 1,5 L1,5 C1,7.209139 2.790861,9 5,9 L5,9 C7.209139,9 9,7.209139 9,5 L9,5 C9,2.790861 7.209139,1 5,1 L5,9 L5,1 Z">
-                                </path>
-                            </svg>
-                        </span>
-                    </label>
-                </div>
-            </fieldset>
+            <div class="center">
+                <input type="checkbox" id="cbx" style="display:none" name="permission" />
+                <label for="cbx" class="toggle">
+                    <span>
+                        <svg width="10px" height="10px" viewBox="0 0 10 10">
+                            <path
+                                d="M5,1 L5,1 C2.790861,1 1,2.790861 1,5 L1,5 C1,7.209139 2.790861,9 5,9 L5,9 C7.209139,9 9,7.209139 9,5 L9,5 C9,2.790861 7.209139,1 5,1 L5,9 L5,1 Z">
+                            </path>
+                        </svg>
+                    </span>
+                </label>
+                <p>Yes, you can email me and process my data for marketing purposes.</p>
+                <a href="Learn">(Learn more)</a>
+            </div>
 
 
+            <button class="formBtn btn-success" type="submit">Submit</button>
+            <button class="formBtn btn-clear" type="clear">Clear</button>
 
-            <fieldset class="flexRowColumn">
-                <legend>Checkbox with SVG indicator (I really like this one):</legend>
-                <div class="cntr">
-
-                    <label for="cbx2" class="label-cbx">
-                        <input id="cbx2" type="checkbox" class="invisible">
-                        <div class="checkbox">
-                            <svg width="20px" height="20px" viewBox="0 0 20 20">
-                                <path
-                                    d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z">
-                                </path>
-                                <polyline points="4 11 8 15 16 6"></polyline>
-                            </svg>
-                        </div>
-                        <span>Send me marketing info</span>
-                    </label>
-
-                    <label for="cbx3" class="label-cbx">
-                        <input id="cbx3" type="checkbox" class="invisible">
-                        <div class="checkbox">
-                            <svg width="20px" height="20px" viewBox="0 0 20 20">
-                                <path
-                                    d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z">
-                                </path>
-                                <polyline points="4 11 8 15 16 6"></polyline>
-                            </svg>
-                        </div>
-                        <span>Send me pizza</span>
-                    </label>
-
-                    <label for="cbx4" class="label-cbx">
-                        <input id="cbx4" type="checkbox" class="invisible">
-                        <div class="checkbox">
-                            <svg width="20px" height="20px" viewBox="0 0 20 20">
-                                <path
-                                    d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z">
-                                </path>
-                                <polyline points="4 11 8 15 16 6"></polyline>
-                            </svg>
-                        </div>
-                        <span>Send me to the farmers market</span>
-                    </label>
-
-                </div>
-            </fieldset>
-
-
-
-
-
-
-
-            <fieldset class="flexRowColumn">
-                <legend>Buttons:</legend>
-                <button class="formBtn" type="submit">Submit</button>
-                <button class="formBtn" type="clear">Clear</button>
-            </fieldset>
         </fieldset>
     </form>
 
