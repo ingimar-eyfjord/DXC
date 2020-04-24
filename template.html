@@ -39,33 +39,34 @@
         <div class="persvassivehook">
             <p>Join the</p>
             <p data-counter class="count">51687</p>
-            <p>professionals who read our newsletters</p>
+            <p>professionals who benefit from our newsletters</p>
         </div>
         <fieldset class="flexRowColumn">
 
 
             <div class="twocol">
-                <label for="fname">First name:</label>
+                <label data-labelInside for="fname">First Name</label>
                 <input type="text" id="fname" name="fname" value="" required>
-                <label for="lname">Last name:</label>
+                <label data-labelInside for="lname">Last Name</label>
                 <input type="text" id="lname" name="lname" value="" required>
             </div>
-            <div class="onecol">
-                <label for="Email">Email</label>
+            <div class="twocol">
+                <label data-labelInside for="Email">Work Email</label>
                 <input type="email" id="Email" name="Email" value="" required>
-            </div>
-            <div class="onecol">
-                <label for="Country">Country</label>
+                <label data-labelInside for="Country">Country</label>
                 <input type="text" id="Country" name="Country" value="" required>
             </div>
             <div class="twocol">
-                <label for="Company">Company Name</label>
+                <label data-labelInside for="Company">Company Name</label>
                 <input type="text" id="Company" name="Company" value="" required>
-                <label for="Title">Job Title</label>
+                <label data-labelInside for="Title">Job Title</label>
                 <input type="text" id="Title" name="Title" value="" required>
             </div>
 
-            <p>Select keywords</p>
+            <div class="keywords">
+                <p>Select your keywords:</p>
+                <p>This helps us filter out the stuff you're not interested in</p>
+            </div>
 
             <div class="cntr cechboxlist">
                 <label for="cbx2" class="label-cbx">
@@ -200,17 +201,10 @@
 
 
             <button class="formBtn btn-success" type="submit">Submit</button>
-            <button class="formBtn btn-clear" type="clear">Clear</button>
+            <button class="formBtn btn-clear" type="clear">Cancel 😞</button>
 
         </fieldset>
     </form>
-
-
-
-
-
-
-
     <script src="index.js"></script>
 </body>
 
