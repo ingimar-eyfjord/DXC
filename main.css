@@ -9,7 +9,6 @@
   font-family: GT Walsheim Pro;
   src: url("GT Walsheim Pro Bold"),local("GTWalsheimProBold"),url(/static/fonts/GTWalsheimProBold.woff2) format("woff2"),url(/static/fonts/GTWalsheimProBold.woff) format("woff"),url(/static/fonts/GTWalsheimProBold.ttf) format("truetype");
   font-weight: 700;
-
   font-style: normal
 }
 
@@ -118,8 +117,6 @@ z-index: 49;
 /* ============  */
 /* down here is the css that is for the switch */
 
-
-  
   .switch-wrap {
     cursor: pointer;
     background: var(--black);
@@ -217,7 +214,6 @@ z-index: 49;
     stroke-dashoffset: 25;
   }
   
-
 .hidden{
   display: none;
 }
@@ -346,7 +342,6 @@ margin-top: 1rem;
       transform: translate(-50%, -50%);
   }
 }
-
  [data-userMessage]{
      padding: 5rem;
      position: absolute;
