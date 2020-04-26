@@ -8,6 +8,7 @@
   },
   "devDependencies": {},
   "scripts": {
+    "open": "parcel *.html --open",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npm run build && parcel index.html --open",
     "build": "parcel build *.html  --public-url ./",
