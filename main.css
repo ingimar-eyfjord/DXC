@@ -1,9 +1,25 @@
+@font-face {
+  font-family: GT Walsheim Pro;
+  src: local("GT Walsheim Pro Regular"),local("GTWalsheimProRegular"),url(/static/fonts/GTWalsheimProRegular.woff2) format("woff2"),url(/static/fonts/GTWalsheimProRegular.woff) format("woff"),url(/static/fonts/GTWalsheimProRegular.ttf) format("truetype");
+  font-weight: 400;
+  font-style: normal
+}
+
+@font-face {
+  font-family: GT Walsheim Pro;
+  src: url("GT Walsheim Pro Bold"),local("GTWalsheimProBold"),url(/static/fonts/GTWalsheimProBold.woff2) format("woff2"),url(/static/fonts/GTWalsheimProBold.woff) format("woff"),url(/static/fonts/GTWalsheimProBold.ttf) format("truetype");
+  font-weight: 700;
+
+  font-style: normal
+}
+
 :root{
 --black: black;
 --white: white;
 --highlight: #f8ea4a;
 }
 html {
+  font-family: GT Walsheim Pro;
     box-sizing: border-box;
     height: 100%;
   }
@@ -32,9 +48,11 @@ font-weight: 600;
 margin-top: 1rem;
 }
 [type="text"], [type="email"]{
-    border: thin;
+    border: 2px;
     border-style: solid;  
-}
+    padding-top: 1.5rem;
+    padding-left: 0.5rem;
+    padding-bottom: 1rem;}
 
 .btn-success{
     background-color: var(--highlight);
@@ -50,7 +68,8 @@ grid-template-rows: 4rem 4rem 4rem;
 text-align: center;
 font-size: 2rem;
 font-weight: 800;
-margin-bottom: 5rem;
+margin-bottom: 8rem;
+text-transform: capitalize;
 }
 .persvassivehook > p{
     margin-right: 0.8ex;
@@ -66,25 +85,40 @@ background-color: gray;
 opacity: 0.2;
 z-index: 49;
 }
+
 .formmodal{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -30%);
     background-color: white;
     z-index: 50;
     padding: 2rem;
-    width: 30vw;
+    width: 22vw;
     border: black;
     border-width: 1px;
     border-style: solid;
 }
+@media screen and (max-width: 1700px) {
+  .formmodal{
+    width: 25vw;}
+  }
+@media screen and (max-width: 1500px) {
+  .formmodal{
+    width: 30vw;}
+  }
+@media screen and (max-width: 1300px) {
+  .formmodal{
+  width: 40vw;}
+}
+@media screen and (max-width: 900px) {
+  .formmodal{
+  width: 55vw;}
+}
 /* ============  */
 /* down here is the css that is for the switch */
 
-  body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
 
-  }
   
   .switch-wrap {
     cursor: pointer;
@@ -183,60 +217,10 @@ z-index: 49;
     stroke-dashoffset: 25;
   }
   
-  /* //// Radio with color */
 
-
-  .radio {
-    position: relative;
-    cursor: pointer;
-    font-size: 14px;
-    display: flex;
-    margin: 10px;
-  }
-  .radio .label {
-    position: relative;
-    display: block;
-    margin-right: 10px;
-    width: 20px;
-    height: 20px;
-    border: 2px solid black;
-    border-radius: 100%;
-    -webkit-tap-highlight-color: transparent;
-  }
-  .radio .label:after {
-    content: '';
-    position: absolute;
-    top: 3px;
-    left: 3px;
-    width: 10px;
-    height: 10px;
-    border-radius: 100%;
-    background: var(--highlight);
-    transform: scale(0);
-    transition: all 0.2s ease;
-    opacity: 0.08;
-    pointer-events: none;
-  }
-  .radio:hover .label:after {
-    transform: scale(3.6);
-  }
-  input[type="radio"]:checked + .label {
-    border-color: var(--highlight);
-  }
-  input[type="radio"]:checked + .label:after {
-    transform: scale(1);
-    transition: all 0.2s cubic-bezier(0.35, 0.9, 0.4, 0.9);
-    opacity: 1;
-  }
-  .cntr {
-    left: 0;
-    width: 100%;
-    text-align: center;
-  }
-  .hidden {
-    display: none;
-  }
-
+.hidden{
+  display: none;
+}
 /* >> checkbox */
 
   .label-cbx {
@@ -352,12 +336,17 @@ margin-top: 1rem;
     grid-column: 2;
     grid-row: 1;
  }
- .onecol input{
-    margin: 0;
-     }
- .onecol{
-margin-top: 1rem;
- }
+ #signupform{
+   opacity: 0;
+  animation: appear2 0.4s forwards ease-out;
+}
+@keyframes appear2 {
+  to{
+      opacity: 1;
+      transform: translate(-50%, -50%);
+  }
+}
+
  [data-userMessage]{
      padding: 5rem;
      position: absolute;
@@ -383,3 +372,106 @@ margin-top: 1rem;
          top: 50%;
      }
  }
+ form fieldset [data-labelInside]{
+   background-color: white;
+   transform: translateY(40%);
+   margin: 0;
+   padding: 0;
+   padding-left: 0.5rem;
+   padding-right: 0.5rem;
+   margin-left: 0.5rem;
+   width: fit-content;
+   height: fit-content;
+ }
+
+ @media screen and (max-width: 800px) {
+   #signupform{
+     width: 95vw;
+     left: 0;
+     top: 0;
+     margin-left: 2.5vw;
+     margin-right: 2.5vw;
+   }
+  fieldset{
+    border-style: none;
+}
+.cechboxlist{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    margin-bottom: 2rem;
+}
+.center{
+    display: grid;
+    grid-template-columns: 0.2fr 1fr;
+    grid-template-rows:0.5fr 0.5fr;
+}
+.center > p{
+margin: 0;}
+.center > a{
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  grid-column: 2;}
+
+.twocol{
+display: grid;
+grid-template-columns: 1fr;
+grid-template-rows: 1fr 1fr;
+grid-column-gap: 1rem;
+margin-bottom: 1rem;
+margin-top: 1rem;
+}
+.twocol > label:first-child{
+   grid-column: 1;
+   grid-row: 1;
+}
+.twocol > input:nth-child(2){
+  grid-column: 1;
+  grid-row: 1;
+}
+.twocol > label:nth-child(3){
+  grid-column: 1;
+  grid-row: 2;
+}
+.twocol > input:nth-child(4){
+  grid-column: 1;
+  grid-row: 2;
+}
+}
+.count{
+  color: var(--highlight);
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+a{
+  color: black;
+}
+.keywords{
+  margin-top: 2.5rem;
+}
+.keywords p:first-child{
+font-weight: bold;
+}
+
+[data-userMessage="accessDenied"]{
+  width: 100vw;
+  height: 50vh;
+  transform: translate(-50%);
+  bottom: 0;
+  padding-left: 35vw;
+  padding-right: 35vw;
+}
+[data-userMessage="accessDenied"] > p:nth-child(2){
+font-weight: 400;
+}
+[data-userMessage="accessDenied"] > button{
+  width: 20vw;
+  height: 5vh;
+  font-size: 1.5rem;
+  }
+
+  
