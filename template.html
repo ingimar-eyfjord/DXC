@@ -14,27 +14,7 @@
 <body>
 
 
-    <div data-userMessage="Permission" class="hidden">
-        <p>Hey friend! Please accept the terms of service agreement</p>
-        <button data-closeUsermessage="Permission" class="formBtn btn-success">OK</button>
-    </div>
-
-    <div data-userMessage="AlreadySubs" class="hidden">
-        <p>Hey friend! You're already be subscribed</p>
-        <button data-closeUsermessage="AlreadySubs" class="formBtn btn-success">OK</button>
-    </div>
-    <div data-userMessage="Success" class="hidden">
-        <p>Welcome to the team! Using the keywords you gave us we promise send only relevant content.</p>
-        <p>Enjoy!</p>
-        <button data-closeUsermessage="Success" class="formBtn btn-success">OK</button>
-    </div>
-
-
-    <div class="formmodalbackground"></div>
-
-
-
-    <form id="signupform" class="flexRowColumn formmodal">
+    <form id="signupform" class="flexRowColumn formmodal hidden">
 
         <div class="persvassivehook">
             <p>Join the</p>
@@ -149,41 +129,6 @@
 
             </div>
 
-
-
-
-
-
-            <!-- <fieldset class="flexRowColumn">
-                <legend>Radio with color (I really like this one):</legend>
-                <div class="cntr">
-
-                    <label for="opt1" class="radio">
-                        <input type="radio" name="rdo" id="opt1" class="hidden" />
-                        <span class="label"></span>Male
-                    </label>
-
-                    <label for="opt2" class="radio">
-                        <input type="radio" name="rdo" id="opt2" class="hidden" />
-                        <span class="label"></span>Female
-                    </label>
-
-                    <label for="opt3" class="radio">
-                        <input type="radio" name="rdo" id="opt3" class="hidden" />
-                        <span class="label"></span>Other
-                    </label>
-
-                    <label for="opt4" class="radio">
-                        <input type="radio" name="rdo" id="opt4" class="hidden" />
-                        <span class="label"></span>Prefere not to say
-                    </label>
-
-                </div>
-            </fieldset> -->
-
-
-
-
             <div class="center">
                 <input type="checkbox" id="cbx" style="display:none" name="permission" />
                 <label for="cbx" class="toggle">
@@ -205,6 +150,32 @@
 
         </fieldset>
     </form>
+
+    <div data-userMessage="Permission" class="hidden">
+        <p>Hey friend! Please accept the terms of service agreement</p>
+        <button data-closeUsermessage="Permission" class="formBtn btn-success">OK</button>
+    </div>
+
+    <div data-userMessage="AlreadySubs" class="hidden">
+        <p>Hey friend! You're already be subscribed</p>
+        <button data-closeUsermessage="AlreadySubs" class="formBtn btn-success">OK</button>
+    </div>
+    <div data-userMessage="Success" class="hidden">
+        <p>Welcome to the team! Using the keywords you gave us we promise send only relevant content.</p>
+        <p>Enjoy!</p>
+        <button data-closeUsermessage="Success" class="formBtn btn-success">OK</button>
+    </div>
+
+
+    <div data-userMessage="accessDenied" class="hidden">
+        <p>Stay informed with our latest updates. Log in or create a free account to keep reading.</p>
+        <p>No subscribtion required</p>
+        <button data-activateform data-closeUsermessage="accessDenied" class="formBtn btn-success">Sign up now</button>
+    </div>
+
+
+    <div class="formmodalbackground hidden"></div>
+
     <script src="index.js"></script>
 </body>
 

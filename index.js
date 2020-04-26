@@ -1,5 +1,23 @@
 window.addEventListener("DOMContentLoaded", svghide)
+window.addEventListener("DOMContentLoaded", checkidsubscribed)
 
+function checkidsubscribed() {
+    if (localStorage.getItem("access")) {
+        console.log("Yes")
+    } else {
+        console.log("No")
+        ////// need to reverse this, so everyting under here must go to no later on 
+        setTimeout(() => {
+            document.querySelector(`[data-userMessage="accessDenied"]`).classList.remove("hidden")
+            document.querySelector(`.formmodalbackground`).classList.remove("hidden")
+            document.querySelector(`[data-activateform]`).addEventListener("click", e = activateForm)
+        }, 2000);
+    }
+}
+
+const activateForm = function () {
+    document.querySelector("#signupform").classList.remove("hidden")
+}
 const url = "https://dxcformexercise-13a8.restdb.io/rest/submissions";
 const api = "	5ea15718919b360ce59b7c0b";
 const reveal = function () {
@@ -83,10 +101,15 @@ function post(postData) {
                     UserMessageToggle("AlreadySubs")
                     const data = JSON.parse(postData);
                     addPriority(data.work_email, postData);
+                    localStorage.setItem("access", "granted")
+                    document.querySelector("#signupform").classList.add("hidden")
+                    document.querySelector(".formmodalbackground").classList.add("hidden")
                 }
             } else if (data._id) {
                 UserMessageToggle("Success")
                 localStorage.setItem("access", "granted")
+                document.querySelector("#signupform").classList.add("hidden")
+                document.querySelector(".formmodalbackground").classList.add("hidden")
             }
         })
 }
