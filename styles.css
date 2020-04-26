@@ -3,8 +3,8 @@ Check media queries for tablet and desktop versions :) */
 /*Global Styles */
 @font-face {
   font-family: "GT-Walsheim";
-  src: url("fonts/GT-Walsheim-Pro-Regular.woff2") format("woff2"),
-    url("fonts/GT-Walsheim-Pro-Bold.woff2") format("woff2");
+  src: url("fonts/GT-Walsheim-Pro-Regular.woff2") format("woff2");
+
   font-weight: normal;
   font-style: normal;
 }
@@ -341,15 +341,16 @@ h2.paragraph {
 }
 .app {
   display: grid;
-  grid-template-columns: 20px 1fr 20px;
+  grid-template-columns: 20px 1fr 20px 1fr;
   background: hotpink;
+  height: 20vh;
 }
 .app > * {
   grid-column: 2 / -2;
 }
 .app > .full {
-  grid-column: 1 / -1;
   background: yellow;
+  height: 10vh;
 }
 /*----media queries---------*/
 
