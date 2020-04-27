@@ -1,10 +1,16 @@
 /* This stylesheet is created for all devices responsive starting from - mobile version - 
 Check media queries for tablet and desktop versions :) */
 /*Global Styles */
+/* CSS Variables */
+:root {
+  --primary: transparent;
+  --dark: #0f3232;
+  --light: #000;
+  --shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+}
 @font-face {
   font-family: "GT-Walsheim";
   src: url("fonts/GT-Walsheim-Pro-Regular.woff2") format("woff2");
-
   font-weight: normal;
   font-style: normal;
 }
@@ -340,6 +346,36 @@ h2.paragraph {
 .case-button {
   text-align: center;
   margin-bottom: 1rem;
+}
+/*------asset page------*/
+
+.showcase h1 {
+  font-size: 4rem;
+  margin-bottom: 0;
+  color: var(--light);
+}
+.showcase p {
+  font-size: 1.3rem;
+  margin-top: 0;
+  color: var(--light);
+}
+/* Top Box */
+.top-box {
+  background: var(--primary);
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  box-shadow: var(--shadow);
+  padding: 1rem;
+}
+.top-box .price {
+  font-size: 3rem;
+}
+.top-box-a {
+  grid-area: top-box-a;
+}
+.top-box-b {
+  grid-area: top-box-b;
 }
 
 /*----media queries---------*/

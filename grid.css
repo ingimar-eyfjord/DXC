@@ -115,7 +115,7 @@ h3 {
   color: #fff;
 }
 .slider-services .title-heading {
-  margin: 0;
+  margin: 0 auto;
 }
 p.text-inside {
   font-size: 1.5rem;
@@ -123,6 +123,36 @@ p.text-inside {
 .slider-services {
   margin-bottom: 5rem;
 }
+.white-square {
+  background: #fff;
+  padding: 15px;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  border-radius: 10px;
+  text-align: center;
+}
+h1.white {
+  font-size: 5rem;
+  color: black;
+}
+img.success {
+  width: 20vw;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+section.Business-process,
+section.Capability-uplift,
+section.success-factors,
+section.End-to-end {
+  margin: 0;
+  padding: 0;
+}
+/*----media queries-----*/
+
 @media screen and (min-width: 950px) {
 }
 @media screen and (min-width: 700px) {
