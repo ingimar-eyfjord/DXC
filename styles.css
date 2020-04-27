@@ -30,7 +30,7 @@ ul {
 p {
   font-size: 1.6rem;
 }
-img:not(.logo) {
+img:not(.logo, .section-imgs) {
   width: 100px;
   max-width: 100%;
   height: auto;
@@ -46,7 +46,9 @@ img:not(.logo) {
 section {
   padding: 5rem 0;
 }
-
+::-webkit-scrollbar {
+  display: none;
+}
 /*header*/
 header {
   width: 100%;
@@ -339,19 +341,7 @@ h2.paragraph {
   text-align: center;
   margin-bottom: 1rem;
 }
-.app {
-  display: grid;
-  grid-template-columns: 20px 1fr 20px 1fr;
-  background: hotpink;
-  height: 20vh;
-}
-.app > * {
-  grid-column: 2 / -2;
-}
-.app > .full {
-  background: yellow;
-  height: 10vh;
-}
+
 /*----media queries---------*/
 
 @media screen and (min-width: 350px) {
