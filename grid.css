@@ -150,6 +150,10 @@ section.End-to-end {
   margin: 0;
   padding: 0;
 }
+.success-factors{
+  height: 20vh;
+  padding-top: 20vhs;
+}
 /*----media queries-----*/
 
 @media screen and (min-width: 950px) {
