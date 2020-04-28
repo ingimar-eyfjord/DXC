@@ -6,7 +6,9 @@
   "dependencies": {
     "parcel-bundler": "^1.12.4"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "cssnano": "^4.1.10"
+  },
   "scripts": {
     "open": "parcel *.html --open",
     "test": "echo \"Error: no test specified\" && exit 1",

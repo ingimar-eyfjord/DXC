@@ -28,7 +28,6 @@
   margin-bottom: calc(-0.25 * var(--gutter));
 }
 section.slider-services {
-  display: grid;
   /* grid-template-columns: repeat(3, 1fr); */
   place-items: center;
   background: #fff;
@@ -130,6 +129,7 @@ p.text-inside {
   justify-items: center;
   border-radius: 10px;
   text-align: center;
+  margin-top: 20rem;
 }
 h1.white {
   font-size: 5rem;
@@ -143,20 +143,25 @@ img.success {
   display: flex;
   justify-content: center;
 }
+section.strategic-alignment {
+  padding-bottom: 0;
+}
+section.Operating-model {
+  padding-bottom: 0;
+}
 section.Business-process,
 section.Capability-uplift,
-section.success-factors,
 section.End-to-end {
   margin: 0;
   padding: 0;
 }
-.success-factors{
+.success-factors {
   height: 70vh;
 }
-.success-factors p{
+.success-factors p {
   color: black;
 }
-.success-factors .container{
+.success-factors .container {
   margin-top: 5vh;
 }
 /*----media queries-----*/
@@ -168,25 +173,27 @@ section.End-to-end {
 @media screen and (min-width: 470px) {
 }
 
-.gridTwoColoms{
+.gridTwoColoms {
   display: grid;
   grid-template-columns: 1fr 1fr;
-text-align: left;
-grid-column-gap: 2rem;
+  text-align: left;
+  grid-column-gap: 2rem;
 }
-.testimonial{
+.testimonial {
   height: fit-content;
   transform: translate(-50%, -70%);
   padding-bottom: 5vh;
 }
-.slider-services p, h3, h1{
+.slider-services p,
+h3,
+h1 {
   color: black;
 }
-.slider-services{
+.slider-services {
   padding: 0;
   margin: 0;
 }
-.testimonial-customer h1{
+.testimonial-customer h1 {
   color: white;
   text-align: left;
 }
