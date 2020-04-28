@@ -489,6 +489,7 @@ margin-bottom: 1rem;
   bottom: 0;
   padding-left: 35vw;
   padding-right: 35vw;
+  position: fixed;
 }
 [data-userMessage="accessDenied"] > p:first-child{
   font-size: 3rem;
@@ -506,6 +507,9 @@ margin-bottom: 2rem;
 
 .cechboxlist > label{
     font-size: 1.5rem;
+  }
+  [data-userMessage]{
+    position: fixed;
   }
 [data-navYellow]{
     background-color: var(--highlight);
@@ -529,4 +533,20 @@ color: black;
     padding-left: 1rem;
     padding-right: 1rem;
     margin-left: 1rem;
+  }
+  form label{
+    color: black;
+    font-size: 1.2rem;
+  }
+
+  form p{
+    color: black;
+  }
+  [data-userMessage] p{
+    color: black;
+  }
+  .center5{position: absolute;
+    white-space: nowrap;
+  left: 50vw;
+  transform: translate(-50%);
   }

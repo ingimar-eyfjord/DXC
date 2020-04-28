@@ -151,8 +151,13 @@ section.End-to-end {
   padding: 0;
 }
 .success-factors{
-  height: 20vh;
-  padding-top: 20vhs;
+  height: 70vh;
+}
+.success-factors p{
+  color: black;
+}
+.success-factors .container{
+  margin-top: 5vh;
 }
 /*----media queries-----*/
 
@@ -178,4 +183,8 @@ grid-column-gap: 2rem;
 .slider-services{
   padding: 0;
   margin: 0;
+}
+.testimonial-customer h1{
+  color: white;
+  text-align: left;
 }

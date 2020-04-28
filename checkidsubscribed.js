@@ -12,7 +12,7 @@ function checkidsubscribed() {
             document.querySelector(`[data-userMessage="accessDenied"]`).classList.remove("hidden")
             document.querySelector(`.formmodalbackground`).classList.remove("hidden")
             document.querySelector(`[data-activateform]`).addEventListener("click", e = activateForm)
-        }, 2000);
+        }, 7000);
     }
 }
 
