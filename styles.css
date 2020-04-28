@@ -297,6 +297,9 @@ nav {
   transform: translate(-50%, -50%);
   text-align: center;
 }
+div.testimonial-customer {
+  margin-top: 10rem;
+}
 .testimonial-text-box {
   padding: 0 1.5rem;
   margin-bottom: 2rem;
@@ -304,7 +307,7 @@ nav {
 }
 .testimonial-text-box i {
   position: absolute;
-  top: -8rem;
+  top: 2rem;
   left: 50%;
   transform: translateX(-50%);
   font-size: 8rem;
@@ -342,6 +345,8 @@ h2.paragraph {
   text-transform: none;
   margin-bottom: 2rem;
   text-align: center;
+  margin-left: 6rem;
+  margin-right: 6rem;
 }
 .case-button {
   text-align: center;
@@ -359,25 +364,23 @@ h2.paragraph {
   margin-top: 0;
   color: var(--light);
 }
-/* Top Box */
-.top-box {
-  background: var(--primary);
-  display: grid;
-  align-items: center;
-  justify-items: center;
-  box-shadow: var(--shadow);
-  padding: 1rem;
+a.home {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 500;
+  padding: 10px;
+  color: #f8e947;
+  font-size: 1.7rem;
+  margin: 10px 10px;
+  cursor: pointer;
 }
-.top-box .price {
-  font-size: 3rem;
+a.home:hover {
+  color: #fff;
 }
-.top-box-a {
-  grid-area: top-box-a;
+h1.author {
+  width: 500px;
+  margin: 0 auto;
 }
-.top-box-b {
-  grid-area: top-box-b;
-}
-
 /*----media queries---------*/
 
 @media screen and (min-width: 350px) {
