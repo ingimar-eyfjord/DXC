@@ -20,12 +20,11 @@
 .hs {
   display: grid;
   grid-gap: calc(var(--gutter) / 2);
-  grid-template-columns: repeat(6, calc(50% - var(--gutter) * 2));
+  grid-template-columns: repeat(6, calc(35% - var(--gutter) * 2));
   grid-template-rows: minmax(150px, 1fr);
-
   overflow-x: scroll;
   scroll-snap-type: x proximity;
-  padding-bottom: calc(0.75 * var(--gutter));
+  padding-bottom: calc(0.25 * var(--gutter));
   margin-bottom: calc(-0.25 * var(--gutter));
 }
 section.slider-services {
@@ -158,4 +157,21 @@ section.End-to-end {
 @media screen and (min-width: 700px) {
 }
 @media screen and (min-width: 470px) {
+}
+
+.gridTwoColoms{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+text-align: left;
+grid-column-gap: 2rem;
+}
+.testimonial{
+  transform: translate(-50%, -70%);
+}
+.slider-services p, h3, h1{
+  color: black;
+}
+.slider-services{
+  padding: 0;
+  margin: 0;
 }
