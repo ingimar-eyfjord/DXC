@@ -191,6 +191,16 @@ border-style: solid;
 border: black;
 border-style: solid;
 }
+.btn-blackBackground{
+  border:white;
+  border-style: solid;
+background-color: white;
+}
+.btn-blackBackground:hover{
+  border: white;
+  border-style: solid;
+  color: #fff;
+}
 /*---case studies section---*/
 .experience-outdoors {
   padding: 0;
