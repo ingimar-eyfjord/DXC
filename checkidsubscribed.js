@@ -1,19 +1,20 @@
+window.addEventListener("DOMContentLoaded", checkidsubscribed)
 window.addEventListener("DOMContentLoaded", svghide)
 
-// function checkidsubscribed() {
-//     const url = window.location.href
-//     if (localStorage.getItem("access")) {
-//         console.log("Yes")
-//     } else {
-//         console.log("No")
-//         ////// need to reverse this, so everyting under here must go to no later on 
-//         setTimeout(() => {
-//             document.querySelector(`[data-userMessage="accessDenied"]`).classList.remove("hidden")
-//             document.querySelector(`.formmodalbackground`).classList.remove("hidden")
-//             document.querySelector(`[data-activateform]`).addEventListener("click", e = activateForm)
-//         }, 2000);
-//     }
-// }
+function checkidsubscribed() {
+    const url = window.location.href
+    if (localStorage.getItem("access")) {
+        console.log("Yes")
+    } else {
+        console.log("No")
+        ////// need to reverse this, so everyting under here must go to no later on 
+        setTimeout(() => {
+            document.querySelector(`[data-userMessage="accessDenied"]`).classList.remove("hidden")
+            document.querySelector(`.formmodalbackground`).classList.remove("hidden")
+            document.querySelector(`[data-activateform]`).addEventListener("click", e = activateForm)
+        }, 2000);
+    }
+}
 
 const activateForm = function () {
     document.querySelector("#signupform").classList.remove("hidden")
@@ -31,21 +32,12 @@ function svghide() {
         e.addEventListener("click", e = reveal)
     })
     count();
-    const r = document.querySelectorAll(`[data-navYellow]`)
-    r.forEach(e => {
-        e.addEventListener("click", revealform)
-    })
+    document.querySelector(`[data-navYellow]`).addEventListener("click", revealform)
     document.querySelector(`[data-closeform]`).addEventListener("click", hideform)
-    document.querySelector(`[data-openLoginModal]`).addEventListener("click", revealfLogin)
-
 }
-
 
 function hideform() {
     document.querySelector("#signupform").classList.add("hidden")
-}
-function revealfLogin() {
-    document.querySelector(`[data-userMessage="login"]`).classList.remove("hidden")
 }
 function revealform() {
     document.querySelector("#signupform").classList.remove("hidden")
