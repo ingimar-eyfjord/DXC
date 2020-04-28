@@ -175,7 +175,9 @@ text-align: left;
 grid-column-gap: 2rem;
 }
 .testimonial{
+  height: fit-content;
   transform: translate(-50%, -70%);
+  padding-bottom: 5vh;
 }
 .slider-services p, h3, h1{
   color: black;

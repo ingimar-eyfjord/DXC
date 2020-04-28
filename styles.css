@@ -276,7 +276,7 @@ background-color: white;
 /*--------section3------*/
 .testimonials {
   width: 100%;
-  height: 60vh;
+  height: 65vh;
   background: linear-gradient(
       135deg,
       rgba(0, 0, 0, 0.9) 0%,
@@ -414,7 +414,7 @@ h1.author {
 }
 @media screen and (min-width: 470px) {
   .hero::before {
-    height: 9.4rem;
+    height: fit-content;
     background: url("images/wave-medium.png");
     background-size: cover;
   }
@@ -483,6 +483,7 @@ h1.author {
 }
 @media screen and (min-width: 950px) {
   .hero::before {
+    height: fit-content;
     height: 10rem;
     background: url("images/wave-large.png");
     background-size: cover;
@@ -495,7 +496,7 @@ h1.author {
 }
 @media screen and (min-width: 1200px) {
   .hero {
-    height: 40vh
+    height: fit-content;
   }
 }
 .begin-adventure{
