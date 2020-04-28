@@ -25,6 +25,9 @@ html {
   font-size: 10px;
   box-sizing: border-box;
 }
+body {
+  font-family: "GT-Walsheim", sans-serif;
+}
 a {
   text-decoration: none;
 }
@@ -75,6 +78,7 @@ nav {
   justify-content: space-between;
   padding: 1rem 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  font-family: "GT-Walsheim", sans-serif;
 }
 .nav-brand {
   width: 2rem;
@@ -184,6 +188,7 @@ nav {
   border: transparent;
   border-style: solid;
   font-weight: 800;
+  font-family: "GT-Walsheim", sans-serif;
 }
 .btn:hover {
   background-color: transparent; /*yellow*/

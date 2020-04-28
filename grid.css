@@ -1,6 +1,9 @@
 :root {
   --gutter: 20px;
 }
+body {
+  font-family: "GT-Walsheim", sans-serif;
+}
 .app {
   padding: var(--gutter) 0;
   display: grid;
@@ -199,4 +202,11 @@ h1 {
 }
 p.text-inside {
   line-height: 1.1;
+}
+h1.author {
+  padding: 1rem;
+}
+
+div.top {
+  margin-top: 2rem;
 }
