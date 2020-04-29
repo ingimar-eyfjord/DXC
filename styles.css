@@ -542,8 +542,8 @@ h3 {
   color: black;
 }
 .factors {
-  color: #fff;
+  color: #f8e947;
 }
 .factors:hover {
-  color: #f8e947;
+  color: #fff;
 }
