@@ -515,6 +515,9 @@ h1.author {
 section.begin-adventure {
   padding: 1rem;
 }
+section.begin-adventure > .container {
+  margin-top: 50px;
+}
 .begin-adventure .title-heading,
 h3,
 p,
