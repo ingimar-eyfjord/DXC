@@ -52,7 +52,7 @@ img:not(.logo, .section-imgs) {
   text-transform: uppercase;
 }
 section {
-  padding: 7rem 0;
+  padding: 6rem 0;
 }
 ::-webkit-scrollbar {
   display: none;
@@ -283,7 +283,7 @@ section.experience-outdoors {
 /*--------section3------*/
 .testimonials {
   width: 100%;
-  height: 80vh;
+  height: 40vw;
   background: linear-gradient(
       135deg,
       rgba(0, 0, 0, 0.9) 0%,
@@ -416,7 +416,15 @@ h1.author {
 
 @media screen and (min-width: 350px) {
   .main-message {
-    transform: translateY(40%);
+    transform: translateY(20%);
+  }
+  .inside-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  section.experience-outdoors {
+    height: 80rem;
   }
 }
 @media screen and (min-width: 470px) {
@@ -425,13 +433,22 @@ h1.author {
     background: url("images/wave-medium.png");
     background-size: cover;
   }
+
   .testimonials::before {
     height: 9.4rem;
     background: url("images/wave-medium-reversed.png");
     background-size: cover;
   }
+  .inside-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 @media screen and (min-width: 700px) {
+  .inside-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
   header {
     height: 8rem;
   }
@@ -451,7 +468,7 @@ h1.author {
     display: none;
   }
   .nav-item {
-    margin: 0 2.5rem;
+    margin: 0 1rem;
   }
   .nav-link,
   .current {
@@ -505,12 +522,22 @@ h1.author {
   .hero {
     height: fit-content;
   }
+  .inside-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+/* end of media queries -------------------*/
+
+.absolute {
+  position: absolute;
+  z-index: 1500;
 }
 .begin-adventure {
+  position: relative;
   background-color: black;
-  height: 90vh;
+  height: 35vw;
   color: white;
-  margin-bottom: -5rem;
 }
 section.begin-adventure {
   padding: 1rem;

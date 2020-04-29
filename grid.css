@@ -121,9 +121,7 @@ h3 {
 p.text-inside {
   font-size: 1.5rem;
 }
-.slider-services {
-  margin-bottom: 5rem;
-}
+
 .white-square {
   background: #fff;
   padding: 15px;
@@ -165,15 +163,10 @@ section.End-to-end {
   color: black;
 }
 .success-factors .container {
-  margin-top: 5vh;
+  margin-top: 5vw;
 }
-/*----media queries-----*/
-
-@media screen and (min-width: 950px) {
-}
-@media screen and (min-width: 700px) {
-}
-@media screen and (min-width: 470px) {
+.improve {
+  color: #000;
 }
 
 .gridTwoColoms {
@@ -206,7 +199,6 @@ p.text-inside {
 h1.author {
   padding: 1rem;
 }
-
 div.top {
   margin-top: 2rem;
 }
