@@ -541,3 +541,9 @@ h3 {
 .End-to-end p {
   color: black;
 }
+.factors {
+  color: #fff;
+}
+.factors:hover {
+  color: #f8e947;
+}
